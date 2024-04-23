@@ -11,8 +11,8 @@ commands_menu = {
     "CONTACT MENU": ContactAssistant(),
     "NOTE": NotesAssistant(),
     "GOODIES MENU": GoodiesAssistant(),
-    "EXIT": ExitAssistant()
-    }
+    "EXIT": ExitAssistant(),
+}
 
 table = Table(show_header=False, style="cyan", width=150)
 table.add_column("", style="bold magenta", justify="center")
@@ -25,8 +25,9 @@ console.print(table)
 
 
 if __name__ == "__main__":
-    # Основной цикл ввода
+    """ main input loop """
     while True:
-        user_input = questionary.select('Choose an action:',
-                                        choices=commands_menu.keys()).ask()
+        user_input = questionary.select(
+            "Choose an action:", choices=commands_menu.keys()
+        ).ask()
         commands_menu[user_input].handler()
