@@ -75,12 +75,13 @@ If you prefer to use Docker, you can use the provided Dockerfile:
 
 3. Build the Docker image:
 
-    ```docker build -t consolebotassistant```   
+    ```docker build -t consolebotassistant .```   
 
 
 4. Run the Docker container:
 
-    ```docker run -it consolebotassistant```
+    ```docker run -it consolebotassistant
+    ```
 
 The application will start automatically when you run the Docker container.
 
